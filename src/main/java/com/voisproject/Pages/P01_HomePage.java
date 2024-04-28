@@ -54,45 +54,4 @@ public class P01_HomePage {
         clicking(driver, todaysdealButton);
         return new P05_TodaysDealsPage(driver);
     }
-
-
-    /**
-     * This method is used to scroll to the bottom of the home page
-     */
-    public P01_HomePage scrollToBottom() {
-        scrollToElementAtBottom(driver, SubscriptionText);
-        return this;
-    }
-
-    /**
-     * This method is used to verify scroll down to the bottom of the home page
-     */
-    public P01_HomePage verifyScrollDown() {
-        verifyElementVisible(SubscriptionText);
-        LogUtils.info("SubscriptionText:" + getText(driver, SubscriptionText));
-        return this;
-    }
-
-    /**
-     * This method is used scrollUp on the home page
-     */
-    public P01_HomePage pressScrollUpButton() {
-        clicking(driver, ScrollUpButton);
-        return this;
-    }
-
-    /**
-     * This method is used to verify scrollUP to the top of the home page
-     */
-    public P01_HomePage verifyScrollUp() {
-        verifyElementVisible(HeaderText);
-        LogUtils.info("HeaderText:" + getText(driver, HeaderText));
-        return this;
-    }
-
-    public P01_HomePage scrollToUpWithOutArrowButton() {
-        scrollToElementAtTop(driver, HeaderText);
-        return this;
-
-    }
 }

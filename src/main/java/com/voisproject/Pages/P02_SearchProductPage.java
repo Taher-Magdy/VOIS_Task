@@ -33,21 +33,4 @@ public class P02_SearchProductPage {
         clicking(driver, FirstElement);
         return new P03_ProuductPage(driver);
     }
-
-
-    public Boolean VerifyUserNavigatedToAllProductsPage() {
-        return verifyElementVisible(AllProductPage);
-    }
-
-
-    public Boolean VerifySearchedProductsSectionVisible() {
-        return verifyElementVisible(SearchedSection);
-    }
-
-    public int VerifyAllProductRelatedToSearchVisible() {
-       LogUtils.info("Search Result Size:" + SearchResults.size());
-       return SearchResults.size();
-    }
-
-
 }
